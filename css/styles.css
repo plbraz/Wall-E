@@ -1,6 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&family=Sarala:wght@400;700&display=swap');
 
 
+:root {
+    --primary-color: #FFF2E7;
+    --secondary-color: #ECD6C4;
+    --background-color: #2F2325;
+    --text-light: #FFF2E7;
+    --text-dark: #2F2325;
+    --box-shadow: rgba(0, 0, 0, 0.25);
+    --font-righteous: 'Righteous', cursive;
+    --font-sarala: 'Sarala', sans-serif;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -8,20 +19,17 @@
     text-decoration: none;
 }
 
-body{
-    background-image: url('espaco2.gif');
+body {
+    background-image: url('../images/espaco2.gif');
     background-size: cover;
     overflow: hidden;
-    
-    
     height: 100vh;
-    padding:0;
-    margin:0;
+    padding: 0;
+    margin: 0;
 }
 
 .cabecalho {
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: space-around;
     padding: 24px;
@@ -33,60 +41,61 @@ body{
 }
 
 .cabecalho-menu {
-    display:flex;
+    display: flex;
     gap: 32px;
 }
 
 .cabecalho-menu-item {
-    font-family: 'Righteous', cursive;
-    color:#FFF2E7;
+    font-family: var(--font-righteous);
+    color: var(--text-light);
     font-weight: 400;
     font-size: 18px;
 }
 
 .conteudo {
     margin-bottom: 48px;
-    border-top: 0.4px solid #FFF2E7;
+    border-top: 0.4px solid var(--primary-color);
 }
 
 .conteudo-principal {
-    display:flex;
-    flex-direction: row;
+    display: flex;
     align-items: center;
     justify-content: space-around;
 }
 
 .conteudo-principal-escrito {
-    display:flex;
+    display: flex;
     flex-direction: column;
     gap: 32px;
 }
 
 .conteudo-principal-titulo {
-    font-family: 'Righteous', cursive;
+    font-family: var(--font-righteous);
     font-weight: 400;
     font-size: 64px;
-    color: #FFF2E7;
+    color: var(--text-light);
 }
 
 .conteudo-principal-subtitulo {
-    font-family: 'Sarala' , sans-serif;
+    font-family: var(--font-sarala);
     font-weight: 400;
     font-size: 24px;
-    color: #ECD6C4;
+    color: var(--secondary-color);
 }
 
 .conteudo-principal-escrito-botao {
-    background-color: #ECD6C4;
+    background-color: var(--secondary-color);
     height: 60px;
     width: 180px;
-    border:none;
-    box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
+    border: none;
+    box-shadow: 4px 5px 4px var(--box-shadow);
     border-radius: 20px;
-    font-family: 'Sarala' , sans-serif;
+    font-family: var(--font-sarala);
     font-weight: 400;
     font-size: 24px;
-    color: #2F2325;
+    color: var(--background-color);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .conteudo-principal-escrito-botao:hover {
@@ -96,11 +105,10 @@ body{
 .conteudo-principal-imagem {
     height: 430px;
     padding-top: 85px;
-    
 }
 
 .conteudo-secundario {
-    display:flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
     gap: 24px;
@@ -108,56 +116,59 @@ body{
 }
 
 .conteudo-secundario-titulo { 
-    border-top: 0.4px solid #FFF2E7;
+    border-top: 0.4px solid var(--primary-color);
     padding-top: 16px;
-    font-family: 'Righteous', cursive;
+    font-family: var(--font-righteous);
     font-weight: 400;
     font-size: 24px;
-    color: #FFF2E7;
+    color: var(--primary-color);
     margin-bottom: 16px;
 }
 
 .conteudo-secundario-paragrafo {
-    font-family: 'Righteous', cursive;
+    font-family: var(--font-righteous);
     font-weight: 300;
     font-size: 18px;
-    color: #FFF2E7;
+    color: var(--primary-color);
 }
 
 .rodape {
     padding: 32px;
-    border-top: 0.4px solid #FFF2E7;
+    border-top: 0.4px solid var(--primary-color);
 }
 
 .rodape-imagem {
     height: 60px;
     display: block;
-    padding-right: 40px;
-    margin-left: 94%;
+    padding-right: 55px;
+    margin-left: auto;
 }
 
 .autor {
-    display:flex;
-    flex-direction: column;
-    align-items:flex-end;
-    font-family: 'Righteous' , sans-serif;
+    display: flex;
+    align-items: center; 
+    justify-content: flex-end; 
+    font-family: var(--font-righteous);
     font-weight: 400;
     font-size: 20px;
     color: #a59b9d;
-    padding-right: 24px;
+    gap: 8px; 
+    margin-right: 24px; 
 }
 
-@media only screen and (max-device-width: 900px) {
-    .cabecalho { 
-        width: 400px;
-        align-items: center;
-     } 
-    .conteudo { 
-        width: 400px;
-        align-content: center;
-     } 
+.autor img {
+    border-radius: 50%; 
+    width: 40px;
+    height: 40px; 
+}
+
+
+/* Media Query */
+@media only screen and (max-width: 900px) {
+    .cabecalho, 
+    .conteudo, 
     .rodape { 
-        width: 400px;
+        width: 100%;
         align-items: center;
      } 
-    }
+}
