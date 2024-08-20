@@ -3,19 +3,8 @@
 ## Project Description
 
 This project is a web page designed to promote the "Wall-E Bot," a bot that can be added to Discord to entertain communities. The design is responsive and uses custom fonts and colors to create a user-friendly and visually appealing interface.
-Note: the bot is under development
 
-## Project Structure
-
-```plaintext
-/
-├── css/
-│   └── styles.css
-├── images/
-│   ├── espaco2.gif
-│   ├── wall-e.png
-│   └── Pedro.jpg
-└── index.html
+**Please note that the bot is still in development.**
 
 ## Project Structure
 
